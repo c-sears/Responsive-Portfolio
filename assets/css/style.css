@@ -268,10 +268,61 @@ footer {
     .portfolio-page {
         height: fit-content;
     }
+
+    .portfolio-page > h1 {
+        text-align: center;
+    }
+
     /* THIS TOOK ME FOREVER TO FIND. 
         Removing <br> so .item-3 does not break onto a new row alone.
     */
     br {
         display: none;
+    }
+}
+
+@media screen and (max-width: 587px) {
+    .wrapper {
+        width: 350px;
+    }
+
+    .myName {
+        float: none;
+        width: calc(100% - 30px);
+        text-align: center;
+        margin: 0;
+        border: none;
+    }
+
+    .item {
+        margin: 15px auto;
+    }
+
+    .portfolio-page > h1 {
+        text-align: center;
+    }
+
+    header {
+        height: fit-content;
+    }
+
+    header > .wrapper {
+        width: 100vw;
+        background-color: #2b2b2b;
+    }
+
+    .headerLinks {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .headerLinks > li {
+        float: none;
+        border-color: #2b2b2b;
+        width: 100%;
+        background-color: #2b2b2b;
+        color: whitesmoke;
     }
 }
