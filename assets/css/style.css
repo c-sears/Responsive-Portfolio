@@ -13,19 +13,33 @@ body {
 /* centering the content and setting the width of the site to 960px */
 .wrapper {
     width: 960px;
-    margin: 23px 5%;
+    margin: 23px 65px;
     background-color: #ffffff;
     display: inline-block;
 }
 
+header > .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    margin-left: 75px;
+    width: calc(100% - 75px);
+    display: block;
+    background-color: #2b2b2b;
+}
+
 /* adding the side panel */
 .sidebar {
-    width: 15%;
+    width: 350px;
     height: 150px;
-    margin: 50px 70px;
+    margin: 50px 0;
     background-color: #a13e3e;
     display: inline-block;
+    position: relative;
+    top: -329px;
     font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px 15px 0 0;
 }
 
 .sidebar-header {
@@ -36,6 +50,18 @@ body {
     font-size: 1.5em;
     color: white;
     line-height: 2;
+    border-radius: 15px 15px 0 0;
+}
+
+.panel-body img {
+    width: 40px;
+    padding: 15px 8px;
+}
+
+.panel-body img:hover {
+    filter: drop-shadow(5px 5px 4px rgb(26, 26, 26));
+    transition: .1s;
+    transform: translate(-2px, -2px)
 }
 
 /* styling and sizing the header */
@@ -68,6 +94,7 @@ header {
 
 .headerLinks {
     float: right;
+    margin-right: 75px;
 }
 
 .headerLinks > li {
@@ -255,6 +282,24 @@ footer {
     font-size: 1.1em;
 }
 
+@media screen and (max-width: 1300px){
+    .sidebar {
+        position: relative;
+        top: 0;
+        width: 960px;
+        margin: 0 65px;
+    }
+
+    .panel-body {
+        margin-left: 320px;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+}
+
 @media screen and (max-width: 992px) {
     footer {
         position: relative;
@@ -263,6 +308,19 @@ footer {
 
     .wrapper {
         width: 715px;
+        margin-left: 45px;
+        margin-top: 15px;
+    }
+
+    .sidebar {
+        position: relative;
+        top: 0;
+        width: 715px;
+        margin: 0 45px;
+    }
+
+    .panel-body {
+        margin-left: 200px;
     }
 
     .landing-page {
@@ -280,6 +338,17 @@ footer {
 @media screen and (max-width: 768px) {
     .wrapper {
         width: 550px;
+        margin-left: 35px;
+    }
+    .sidebar {
+        position: relative;
+        top: 0;
+        width: 550px;
+        margin: 0 35px;
+    }
+
+    .panel-body {
+        margin-left: 100px;
     }
 
     .item {
@@ -306,9 +375,25 @@ footer {
     }
 }
 
-@media screen and (max-width: 587px) {
+@media screen and (max-width: 603px) {
     .wrapper {
         width: 350px;
+        margin-top: 45px;
+    }
+
+    .sidebar {
+        position: relative;
+        top: 0;
+        width: 350px;
+        margin: 0 35px;
+    }
+
+    .panel-body {
+        margin-left: 30px;
+    }
+
+    .panel-body img {
+        width: 28px;
     }
 
     .myName {
@@ -344,7 +429,11 @@ footer {
     }
 
     header > .wrapper {
+        position: static;
+        
+        margin: 0;
         width: 100vw;
+        display: block;
         background-color: #2b2b2b;
     }
 
