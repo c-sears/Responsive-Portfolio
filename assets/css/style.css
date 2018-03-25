@@ -13,9 +13,31 @@ body {
 /* centering the content and setting the width of the site to 960px */
 .wrapper {
     width: 960px;
-    margin: 0 auto;
+    margin: 23px 5%;
     background-color: #ffffff;
+    display: inline-block;
 }
+
+/* adding the side panel */
+.sidebar {
+    width: 15%;
+    height: 150px;
+    margin: 50px 70px;
+    background-color: #a13e3e;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar-header {
+    width: 100%;
+    height: 50px;
+    background-color: #2b2b2b;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    line-height: 2;
+}
+
 /* styling and sizing the header */
 header {
     background-color: #2b2b2b;
@@ -80,14 +102,7 @@ li > a {
     height: 500px;
 }
 
-.right-border {
-    width: 0;
-    border-right: 3px solid white;
-    position: absolute;
-    bottom: 45px;
-    right: 288px;
-    height: 50px;
-}
+
 
 .landing-page > h1 {
     padding: 10px;
